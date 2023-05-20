@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="ajax/estilos.css">
 <?php
 	// include Database connection file 
 	include("db_connection.php");
@@ -27,32 +28,33 @@
     	$number = 1;
     	while($row = mysqli_fetch_assoc($result))
     	{
-    		$data .= '<tr class="bg-primary">
-			</br>
-		
+			$data .= '<div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control text-center" id="nombre" value="'.$row['nombre'].'" readonly>
+              </div>
+              <div class="form-group">
+                <label for="apellido-paterno">Apellido Paterno</label>
+                <input type="text" class="form-control text-center" id="apellido-paterno" value="'.$row['apelli_Paterno'].'" readonly>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="apellido-materno">Apellido Materno</label>
+                <input type="text" class="form-control text-center" id="apellido-materno" value="'.$row['apelli_Materno'].'" readonly>
+              </div>
+              <div class="form-group">
+                <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                <input type="text" class="form-control text-center" id="fecha-nacimiento" value="'.$row['fecha_nacimiento'].'" readonly>
+              </div>
+              <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="text" class="form-control text-center" id="edad" value="'.$row['edad'].'" readonly>
+              </div>
+            </div>
+          </div>';
 
-
-  
-
-  <div class="col-md-12">
-           <div class="input-group flex-nowrap">
-           <span class="input-group-text  bg-info" id="addon-wrapping">Nombre</span>
-           <td><span class="input-group-text" id="basic-addon2">'.$row['nombre'].'</td></span></br>
-           <span class="input-group-text bg-info" id="addon-wrapping">Apellido Paterno</span>
-		   <td><span class="input-group-text" id="basic-addon2">'.$row['apelli_Paterno'].'</td></span></br>
-          <span class="input-group-text bg-info" id="addon-wrapping">Apellido Materno</span>
-		  <td><span class="input-group-text" id="basic-addon2">'.$row['apelli_Materno'].'</td></span></br>
-		  <span class="input-group-text bg-info" id="addon-wrapping">Fecha de Nacimiento</span>
-		  <td><span class="input-group-text" id="basic-addon2">'.$row['fecha_nacimiento'].'</td></span></br>
-		  <span class="input-group-text bg-info" id="addon-wrapping">Edad</span>
-		  <td><span class="input-group-text" id="basic-addon2">'.$row['edad'].'</td></span></br>
-        </div>      
-        </div>
-</br>
-			
-		
-			
-    		</tr>';
     		$number++;
     	}
     }

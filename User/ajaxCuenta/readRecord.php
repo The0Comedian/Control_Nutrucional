@@ -4,13 +4,7 @@
 
 	// Design initial table header 
 	$data = '<table class="table table-bordered table-striped">
-						<tr>
-							
-							<th>Nombre</th>
-							<th>Usuario</th>
-							
-							<th>Contraseña</th>
-							<th></th>
+						
 						</tr>';
 
 						session_start(); 
@@ -29,17 +23,24 @@
     	$number = 1;
     	while($row = mysqli_fetch_assoc($result))
     	{
-    		$data .= '<tr>
-			
-				<td>'.$row['Nombre'].'</td>
-				<td>'.$row['usuario'].'</td>
-			
-				<td><input  disabled type="password" name="contraseña" value='.$row['Contraseña'].'></td>
-				<td>
-					<button onclick="GetUserDetails('.$row['id'].')" class="btn btn-warning">Actualizar<i class="fas fa-edit"></i></button>
-				</td>
-			
-    		</tr>';
+    		$data .= '<form>
+				<div class="form-group">
+					<label for="nombre">Nombre:</label>
+					<input type="text" class="form-control" id="nombre" name="nombre" value="'.$row['Nombre'].'" required disabled>
+				</div>
+				<div class="form-group">
+					<label for="usuario">Usuario:</label>
+					<input type="text" class="form-control" id="usuario" name="usuario" value="'.$row['usuario'].'" required disabled>
+				</div>
+				<div class="form-group">
+					<label for="contraseña">Contraseña:</label>
+					<input type="password" class="form-control" id="contraseña" name="contraseña" value="'.$row['Contraseña'].'" disabled>
+				</div>
+				</br>
+				<button type="button" onclick="GetUserDetails('.$row['id'].')" class="btn btn-warning">Actualizar</button>
+			</form>';
+
+
     		$number++;
     	}
     }

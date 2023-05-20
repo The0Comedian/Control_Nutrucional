@@ -28,7 +28,7 @@
 			<div class="col-md-4 text-center company__info">
 			
                 <!-----modificaion en la lina css->   8-17-->
-				<h4 class="company_title">Nombre de empresa</h4>
+				<h4 class="company_title">Sistema Web para el control médico en menores de 12 años.</h4>
 			</div>
 			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
 				<div class="container-fluid">
@@ -55,6 +55,7 @@
                     <div class="row" id="oplogin">
                     <?php include('google/index.php');?>
                     </div>
+					<!--
                     <div class="row" id="face">
                     <button  id="botonFace" class="w-100 py-2 mb-2 btn btn-outline-dark rounded-3" type="button"><svg class="bi me-1" width="16" height="16"></svg>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -62,6 +63,7 @@
                     </svg> inicar Facebook</button>
 					
 					</div>
+					---------->
 												
 						</form>
 					</div>
@@ -76,3 +78,4 @@
 	<!-- Footer -->
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
