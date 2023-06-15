@@ -48,6 +48,8 @@
 <script src="dist/js/bootstrap.min.js"></script> 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="jsTallaPeso/jquery-1.11.3.min.js"></script> 
+<script src="dist/js/bootstrap.min.js"></script> 
 
 </body>
 </html>

@@ -29,10 +29,11 @@
     	while($row = mysqli_fetch_assoc($result))
     	{
 			$data .= '<div class="row">
+      <h3>DATOS DE TUTOR</h3>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control text-center" id="nombre" value="'.$row['nombre'].'" readonly>
+                <input type="text" class="form-control text-center" id="nombre" value="'.$row['Nombre'].'" readonly>
               </div>
               <div class="form-group">
                 <label for="apellido-paterno">Apellido Paterno</label>
@@ -45,13 +46,50 @@
                 <input type="text" class="form-control text-center" id="apellido-materno" value="'.$row['apelli_Materno'].'" readonly>
               </div>
               <div class="form-group">
-                <label for="fecha-nacimiento">Fecha de Nacimiento</label>
-                <input type="text" class="form-control text-center" id="fecha-nacimiento" value="'.$row['fecha_nacimiento'].'" readonly>
+                <label for="edad">Edad</label>
+                <input type="text" class="form-control text-center" id="edad" value="'.$row['edadtutor'].' años" readonly>
+              </div>
+              <div class="form-group">
+              <label for="edad">Parentesco</label>
+              <input type="text" class="form-control text-center" id="edad" value="'.$row['parentesco_tutor'].'" readonly>
+            </div>
+            </div>
+            <h3>DATOS DEL MENOR </h3>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control text-center" id="nombre" value="'.$row['Nombre_menor'].'" readonly>
+              </div>
+              <div class="form-group">
+                <label for="apellido-paterno">Apellido Paterno</label>
+                <input type="text" class="form-control text-center" id="apellido-paterno" value="'.$row['apellidoPater_menor'].'" readonly>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="apellido-materno">Apellido Materno</label>
+                <input type="text" class="form-control text-center" id="apellido-materno" value="'.$row['apellidoMaterno_Menor'].'" readonly>
               </div>
               <div class="form-group">
                 <label for="edad">Edad</label>
-                <input type="text" class="form-control text-center" id="edad" value="'.$row['edad'].'" readonly>
+                <input type="text" class="form-control text-center" id="edad" value="'.$row['edad_Menor'].' años" readonly>
               </div>
+              </div>
+              <h3>DATOS DEL DOMICILIO </h3>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nombre">Municipio</label>
+                  <input type="text" class="form-control text-center" id="nombre" value="'.$row['municipio'].'" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="apellido-paterno">Localidad</label>
+                  <input type="text" class="form-control text-center" id="apellido-paterno" value="'.$row['localidad'].'" readonly>
+                </div>
+              </div>
+              
+       
+         
+         
             </div>
           </div>';
 

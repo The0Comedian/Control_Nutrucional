@@ -69,13 +69,13 @@
         </div>
         <div class="form-group">
           <label for="CodMatri">Nueva Contraseña</label>
-          <input type="text" id="Contraseña" class="form-control" value=""/>
+          <input type="password" id="Contraseña" class="form-control" value=""/>
         </div>
         <div class="form-group">
           <label for="Observacion">Nueva Contraseña</label>
           <!------codigo de palabraas en mayusculas---->
-          <textarea style="text-transform:uppercase" id="newContraseña" class="form-control"></textarea>
-          <!--<input type="text" id="obs" class="form-control"/>--> 
+         <!-- <textarea style="text-transform:uppercase" id="newContraseña" class="form-control"></textarea>-->
+          <input type="password"id="newContraseña" class="form-control"/>
         </div>
       </div>
   
@@ -92,7 +92,7 @@
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
 <!-- Bootstrap JS file --> 
 <!-- Custom JS file --> 
-<script type="text/javascript" src="js/scriptV3.js"></script> 
+<script type="text/javascript" src="js/scriptV4.js"></script> 
 <!-- Script para notificaciones-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

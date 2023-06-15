@@ -64,8 +64,8 @@ if($varsesionlocal== null || $varsesionlocal=''){
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="estilos/home.css">
- 
+
+<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     
@@ -82,17 +82,24 @@ if($varsesionlocal== null || $varsesionlocal=''){
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+           <li class="nav__item">
+            <a class="nav-link active blue-box"href="#">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="misDatos.php">Mis Datos</a>
+            <li class="nav__item">
+              <a class="nav-link" href="TallaPeso.php">Peso y Talla</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Datos Parentescos</a>
+            <li class="nav__item">
+            <a class="nav-link" href="Vacunas.php">Vacuenas</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav-link" href="sugerencias.php">Sugerencias</a>
+            </li>
+            
+            <li class="nav__item">
+              <a class="nav-link" href="misDatos.php">Datos Personale</a>
             </li>
            
-        <li class="nav-item dropdown">
+        <li class="nav__item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Opciones de Cuenta
         </a>
@@ -109,31 +116,14 @@ if($varsesionlocal== null || $varsesionlocal=''){
 </nav>
 
 
-  <div class="container my-12">
-    <?php
-  if ( $row2['id_usuario'] =="" ){
-                            ?>
-                            
-                            <div class="alert alert-primary" role="alert">
-                            Datos de Personales. Aun vacios <a href="misDatos.php" class="alert-link">Mis Datos</a>. Da click para llenar.</div>
-                            <script type="text/javascript" src="jsTallaPeso/jquery-1.11.3.min.js"></script> 
-<script src="dist/js/bootstrap.min.js"></script> 
-                           <?php
-                            
-  
-                          }
-                     
-                          else{
-                      include ('inicioHome.php'); 
-                            
-                          }
-                       
-                           ?>
+<h3>Bienvenido Usuario</h3>
 
 
 </main>
 
   </body>
+  <script type="text/javascript" src="jsTallaPeso/jquery-1.11.3.min.js"></script> 
+  <script src="dist/js/bootstrap.min.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!---------iconv_strpos---->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">

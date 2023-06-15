@@ -121,7 +121,7 @@ $calcular = $edadsCal;
 
 $VariableBajoPeso='<div class="alert alert-danger" role="alert"> <i class="bi bi-exclamation-square-fill"></i> Bajo de Peso</div>';
 $VariableBajoRiesgo='<div class="alert alert-warning" role="alert"><i class="bi bi-shield-fill-exclamation"></i> En riesgos de desnutricion</div>';
-$VariablePesoNormal='<div class="alert alert-primary" role="alert"><i class="bi bi-shield-shaded"style="font-size: 2rem;"></i> <h4>¡Estado de nutricion Bueno!</h4> <a href="#" class="alert-link">Conocer más...</a></div>';
+$VariablePesoNormal='<div class="alert alert-primary" role="alert"><i class="bi bi-shield-shaded"style="font-size: 2rem;"></i> <h4>¡Estado de nutricion Bueno!</h4> <a href="./sugerencias.php" class="alert-link">Conocer más...</a></div>';
 $VariableSobrepesoRiesgo='<div class="alert alert-warning" role="alert"><i class="bi bi-shield-fill-exclamation"></i> En riesgos de Sobrepeso </div>';
 $VariableSobrepeso='<div class="alert alert-warning" role="alert"><i class="bi bi-exclamation-square-fill"></i> Sobrepeso </div>';
 $VariableObesidad='<div class="alert alert-danger" role="alert"><i class="bi bi-exclamation-square-fill"></i> Obesidad</div>';
@@ -389,15 +389,15 @@ switch ($calcular) {
                                                                                                        }
                                                                                                      if ($imc > 15.0 && $imc <= 16.0) {
                                                                                                      echo $VariablePesoNormal; 
-                                                                                                     $subnormal=1;
-                                                                                                     $normal = file_get_contents('../sugerencias/normal.php');
+                                                                                                     //$subnormal=1;
+                                                                                                    // $normal = file_get_contents('../sugerencias/normal.php');
                                                                                                      // Imprime la URL contenida en pagina.php
                                                                                                      }
                                                                                                      if ($imc > 16.1 && $imc < 17.3) {
                                                                                                        echo $VariableSobrepesoRiesgo;
                                                                                                        //conveecion para traer  pagina 
-                                                                                                       $subobesidad=1;
-                                                                                                       $url = file_get_contents('../pruebas.php');
+                                                                                                      // $subobesidad=1;
+                                                                                                      // $url = file_get_contents('../pruebas.php');
                                                                                                           // Imprime la URL contenida en pagina.php
                                                                                                     
                                                                                                      }

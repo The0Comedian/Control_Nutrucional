@@ -45,18 +45,17 @@ if($varsesionlocal== null || $varsesionlocal=''){
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Inicio</title>
+    <title>Mi Cuenta</title>
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="estilos/home.css">
+<link rel="stylesheet" href="css/style.css">
  
   </head>
   <body>
     
 <main>
   
-
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Mi empresa</a>
@@ -65,17 +64,24 @@ if($varsesionlocal== null || $varsesionlocal=''){
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.php">Inicio</a>
+           <li class="nav__item">
+            <a class="nav-link"href="home.php">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="misDatos.php">Mis Datos</a>
+            <li class="nav__item">
+            <a class="nav-link" href="TallaPeso.php">Peso y Talla</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Datos Parentescos</a>
+            <li class="nav__item">
+            <a class="nav-link" href="Vacunas.php">Vacuenas</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav-link" href="sugerencias.php">Sugerencias</a>
+            </li>
+            
+            <li class="nav__item">
+            <a class="nav-link" href="misDatos.php">Datos Personale</a>
             </li>
            
-        <li class="nav-item dropdown">
+        <li class="nav__item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Opciones de Cuenta
         </a>

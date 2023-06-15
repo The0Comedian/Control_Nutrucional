@@ -137,3 +137,7 @@ form{
 	margin-bottom: 1em;   
   
 }
+body{
+	background: rgb(64,86,194);
+background: radial-gradient(circle, rgba(64,86,194,0.4822303921568627) 0%, rgba(147,147,147,1) 100%);
+}

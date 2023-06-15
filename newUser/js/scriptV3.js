@@ -24,7 +24,7 @@ function addRecord() {
           return false;
     } 
 
-    if ( Nombre===""){
+    if (Nombre === "" || !/^[A-Za-z]+$/.test(Nombre)) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',

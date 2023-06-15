@@ -2,7 +2,7 @@
 	if(isset($_POST['nombre']) )
 	{
 		// include Database connection file 
-		include("db_connection.php");
+		include("../ajax/db_connection.php");
 
 		// get values 
 		$nombre = $_POST['nombre'];
