@@ -89,7 +89,7 @@ if($varsesionlocal== null || $varsesionlocal=''){
             <a class="nav-link" href="TallaPeso.php">Peso y Talla</a>
             </li>
             <li class="nav__item">
-            <a class="nav-link active blue-box" href="Vacunas.php">Vacuenas</a>
+            <a class="nav-link active blue-box" href="Vacunas.php">Vacunas</a>
             </li>
             <li class="nav__item">
               <a class="nav-link" href="sugerencias.php">Sugerencias</a>

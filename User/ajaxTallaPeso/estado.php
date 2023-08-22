@@ -3,7 +3,7 @@
 	include("conexion.php");
 
 	// Variable sesion
-  session_start(); 						
+			
 	$usuario=$_SESSION['usuario'];  			
   //consulta
 $query = "SELECT * FROM tallapeso WHERE id_usuario='$usuario'";

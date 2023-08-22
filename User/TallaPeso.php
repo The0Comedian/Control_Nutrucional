@@ -89,7 +89,7 @@ if($varsesionlocal== null || $varsesionlocal=''){
             <a class="nav-link active blue-box" href="#">Peso y Talla</a>
             </li>
             <li class="nav__item">
-            <a class="nav-link" href="Vacunas.php">Vacuenas</a>
+            <a class="nav-link" href="Vacunas.php">Vacunas</a>
             </li>
             <li class="nav__item">
               <a class="nav-link" href="sugerencias.php">Sugerencias</a>
@@ -143,7 +143,7 @@ if($varsesionlocal== null || $varsesionlocal=''){
   </body>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!---------iconv_strpos---->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </html>
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">

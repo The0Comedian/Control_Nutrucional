@@ -11,6 +11,7 @@
 							<th>Peso</th>
 							<th>Edad</th>
 							<th>Fecha</th>
+							<th>Eliminar</th>
 							
 						</tr>';
 						session_start(); 
@@ -38,6 +39,10 @@ $query = "SELECT * FROM tallapeso WHERE id_usuario='$usuario'";
 				<td>'.$row['peso'].'</td>
 				<td>'.$row['edad'].'</td>
 				<td>'.$row['fecha'].'</td>
+				<td>
+					<button onclick="DeleteUser('.$row['id'].')" class="btn btn-danger">
+					<i class="bi bi-trash"></i>
+				</td>
 				
     		</tr>';
     		$number++;
@@ -56,8 +61,8 @@ $query = "SELECT * FROM tallapeso WHERE id_usuario='$usuario'";
 </div>
 <style type="text/css">
 div.scroll_vertical {
-	height: 650px;
-	width: 550px;
+	height: 300px;
+	width: 1100px;
 	overflow: auto;
 	border: 1px solid #666;
 	/*background-color: #ccc;*/

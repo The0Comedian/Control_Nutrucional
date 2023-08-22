@@ -37,13 +37,14 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="id_alumno">Talla</label>
-          <input type="text" id="talla" value=""   class="form-control"/>
+          <input type="text" id="talla" value=""  placeholder="ejemplo .89 o 1.23"  class="form-control"/>
          
         </div>
         <div class="form-group">
           <label for="Cod ALumno">Peso</label>
-          <input type="text" id="peso" value=""   class="form-control"/>
+          <input type="text" id="peso" value="" placeholder="ejemplo 23"   class="form-control"/>
         </div>
+        <br>
         <div class="input-group mb-12"> 
     <label class="input-group-text col-7"  for="inputGroupSelect01">Edad</label>
     <select class="form-select col-5" id="edad2">
@@ -126,7 +127,7 @@
 <script type="text/javascript" src="jsTallaPeso/jquery-1.11.3.min.js"></script> 
 <!-- Bootstrap JS file --> 
 <!-- Custom JS file --> 
-<script type="text/javascript" src="jsTallaPeso/tiempov3.js"></script> 
+<script type="text/javascript" src="jsTallaPeso/tiempov5.js"></script> 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -157,11 +158,13 @@
 
 
 <div class="row g-12">
-  <div class="col-md-6">
-    <h2>Curva de crecimiento</h2>
+  <div class="col-md-12">
+    <CENTER>
+    <h2>HISTORIAL DE CRECIMIENTO Y PESO</h2>
+</CENTER>
    <!-- <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p> --->
     
-    <h3> <small class="text-muted"><?php echo $row2['nombre'] ?> <?php echo $row2['apelli_Paterno'] ?> <?php echo $row2['apelli_Materno'] ?></small></h3>
+    <h3> <small class="text-muted"><?php echo $row2['Nombre_menor'] ?> <?php echo $row2['apellidoPater_menor'] ?> </small></h3>
     <ul class="icon-list ps-0">
     
       <li class="text-muted d-flex align-items-start mb-1">Estado de Nutricion</li>
@@ -184,7 +187,7 @@
    
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-12">
     <h2>Historial de Tall y Peso</h2>
    <!-- <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>-->
     <ul class="icon-list ps-0">

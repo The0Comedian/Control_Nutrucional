@@ -7,7 +7,25 @@ function addRecord() {
     edadVacuna= document.getElementById("edadVacuna").value;
     id_usuarioVacunas= document.getElementById("id_usuarioVacunas").value;
 
-    if ( dosis==="" || edadVacuna===""){
+    if (vacuna === "" && vacunas_otras === "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Debes completar al menos uno campo del nombre de la vacuna'    
+      })
+      return false;
+    }
+  
+    // Verificar si ambos campos tienen un valor
+    if (vacuna !== "" && vacunas_otras !== "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Solo uno de los campos de nomnbre de la vacuna puede tener un valor !'    
+      })
+      return false;
+    }
+    if ( dosis==="" || edadVacuna==="" ){
       Swal.fire({
           icon: 'error',
           title: 'Oops...',

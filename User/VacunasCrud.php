@@ -16,7 +16,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="pull-right">
-        <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Agregar Nueva Vacuna</button>
+        <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Agregar Nueva Registro</button>
       </div>
     </div>
   </div>
@@ -151,7 +151,7 @@
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
 <!-- Bootstrap JS file --> 
 <!-- Custom JS file --> 
-<script type="text/javascript" src="jsVacuna/scriptV3.js"></script> 
+<script type="text/javascript" src="jsVacuna/scriptV4.js"></script> 
 <!-- Fin crud jquery-->
 
 

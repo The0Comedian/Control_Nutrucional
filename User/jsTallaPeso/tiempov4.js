@@ -1,22 +1,85 @@
-
+// Add Record
+function validarDatos() {
+    var inputTalla = document.getElementById("talla").value;
+    var inputPeso = document.getElementById("peso").value;
+    
+    // Validar la talla en metros
+    if (isNaN(inputTalla)) {
+      alert("Por favor, ingresa una talla válida en metros.");
+      return;
+    }
+    
+    var talla = parseFloat(inputTalla);
+    if (talla <= 0 || talla > 3) {
+      alert("La talla debe estar entre 0 y 3 metros.");
+      return;
+    }
+    
+    // Validar el peso en kilogramos
+    if (isNaN(inputPeso)) {
+      alert("Por favor, ingresa un peso válido en kilogramos.");
+      return;
+    }
+    
+    var peso = parseFloat(inputPeso);
+    if (peso <= 0 || peso > 300) {
+      alert("El peso debe estar entre 0 y 300 kilogramos.");
+      return;
+    }
+    
+    // Si pasa la validación, habilitar el botón "Agregar"
+    document.getElementById("agregar").disabled = false;
+    
+    alert("Datos válidos: Talla = " + talla + " metros, Peso = " + peso + " kilogramos");
+    addRecord() 
+  }
+  
+ 
+  
 function addRecord() {
     // get values
-    validarDatos(); 
+
     talla= document.getElementById("talla").value;
     peso= document.getElementById("peso").value;
     edad2= document.getElementById("edad2").value;
     //apelli_paterno= document.getElementById("apelli_paterno").value;
+    if (isNaN(inputTalla)) {
+        alert("Por favor, ingresa una talla válida en metros.");
+        return;
+      }
+      
+      var talla = parseFloat(inputTalla);
+      if (talla <= 0 || talla > 3) {
+        alert("La talla debe estar entre 0 y 3 metros.");
+        return;
+      }
+      
+      // Validar el peso en kilogramos
+      if (isNaN(inputPeso)) {
+        alert("Por favor, ingresa un peso válido en kilogramos.");
+        return;
+      }
+      
+      var peso = parseFloat(inputPeso);
+      if (peso <= 0 || peso > 300) {
+        alert("El peso debe estar entre 0 y 300 kilogramos.");
+        return;
+      }
+      
     if ( talla==="" || peso==="" || edad2===""){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Todos los campos son obligatorios !'    
           })
+          
           return false;
 
     }
+    
     else 
     {
+            
     var id_usuario = $("#id_usuario").val();
     var talla = $("#talla").val();
     var peso = $("#peso").val();

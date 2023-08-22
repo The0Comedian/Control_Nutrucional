@@ -1,7 +1,9 @@
 
+ 
+  
 function addRecord() {
     // get values
-    validarDatos(); 
+
     talla= document.getElementById("talla").value;
     peso= document.getElementById("peso").value;
     edad2= document.getElementById("edad2").value;
@@ -12,11 +14,40 @@ function addRecord() {
             title: 'Oops...',
             text: 'Todos los campos son obligatorios !'    
           })
+          
           return false;
 
     }
+    var inputTalla = document.getElementById("talla").value;
+    var inputPeso = document.getElementById("peso").value;
+    if (isNaN(inputTalla)) {
+        alert("Por favor, ingresa una talla válida en metros.");
+        return;
+      }
+      
+      var talla = parseFloat(inputTalla);
+      if (talla <= 0 || talla > 3) {
+        alert("La talla debe estar entre 0 y 3 metros.");
+        return;
+      }
+      
+      // Validar el peso en kilogramos
+      if (isNaN(inputPeso)) {
+        alert("Por favor, ingresa un peso válido en kilogramos.");
+        return;
+      }
+      
+      var peso = parseFloat(inputPeso);
+      if (peso <= 0 || peso > 300) {
+        alert("El peso debe estar entre 0 y 300 kilogramos.");
+        return;
+      }
+      
+    
+    
     else 
     {
+            
     var id_usuario = $("#id_usuario").val();
     var talla = $("#talla").val();
     var peso = $("#peso").val();
@@ -69,18 +100,28 @@ function readRecords() {
 
 
 function DeleteUser(id) {
-    var conf = confirm("¿Está seguro, realmente desea eliminar el registro?");
-    if (conf == true) {
-        $.post("ajaxTallaPeso/deleteUser.php", {
-                id: id
-            },
-            function (data, status) {
-                // reload Users by using readRecords();
-                readRecords();
-            }
-        );
-    }
-}
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: '¡No podrás revertir esto!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminarlo'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        $.post('ajaxTallaPeso/deleteUser.php', { id: id }, function (data, status) {
+          Swal.fire(
+            '¡Eliminado!',
+            'Tu archivo ha sido eliminado.',
+            'success'
+          );
+          readRecords();
+        });
+      }
+    });
+  }
+  
 
 function GetUserDetails(id) {
     // Add User ID to the hidden field for furture usage
